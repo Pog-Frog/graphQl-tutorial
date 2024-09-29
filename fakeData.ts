@@ -13,7 +13,8 @@ export const UserData = [
                 age: 30,
                 nationality: "Canadian"
             }
-        ]
+        ],
+        favoriteMovies: [1, 2]
     },
     {
         id: 2,

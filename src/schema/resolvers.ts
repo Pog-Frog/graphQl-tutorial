@@ -14,6 +14,12 @@ const resolvers = {
         movie: (parent: any, args: any) => {
             return MovieData.find((movie: any) => movie.name == args.name);
         }
+    },
+
+    User: {
+        favoriteMovies: (parent: any) => {
+            return MovieData.filter((movie: any) => parent.favoriteMovies.includes(movie.id));
+        }
     }
 }
 
