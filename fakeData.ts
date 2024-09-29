@@ -4,14 +4,32 @@ const UserData = [
         name: "John Doe",
         email: "johndoe@gmail.com",
         age: 25,
-        nationality: "American"
+        nationality: "American",
+        friends: [
+            {
+                id: 2,
+                name: "Jane Smith",
+                email: "janesmith@yahoo.com",
+                age: 30,
+                nationality: "Canadian"
+            }
+        ]
     },
     {
         id: 2,
         name: "Jane Smith",
         email: "janesmith@yahoo.com",
         age: 30,
-        nationality: "Canadian"
+        nationality: "Canadian",
+        friends: [
+            {
+                id: 4,
+                name: "Aisha Khan",
+                email: "aishakhan@outlook.com",
+                age: 22,
+                nationality: "Pakistani"
+            }
+        ]
     },
     {
         id: 3,
