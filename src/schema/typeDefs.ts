@@ -14,6 +14,8 @@ const typeDefs = gql`
     type Query {
         users: [User!]!
         user(id: ID!): User
+        movies: [Movie!]!
+        movie(name: String!): Movie
     }
     
     enum Nationality {
@@ -22,6 +24,13 @@ const typeDefs = gql`
         American
         Pakistani
         Mexican
+    }
+
+    type Movie {
+        id: ID!
+        name: String!
+        year: Int!
+        isPopular: Boolean!
     }
 `;
 
