@@ -1,4 +1,4 @@
-const UserData = [
+export const UserData = [
     {
         id: 1,
         name: "John Doe",
@@ -54,4 +54,29 @@ const UserData = [
     }
 ]
 
-export default UserData;
+export const MovieData = [
+    {
+        id: 1,
+        name: "The Shawshank Redemption",
+        year: 1994,
+        isPopular: true
+    },
+    {
+        id: 2,
+        name: "The Godfather",
+        year: 1972,
+        isPopular: true
+    },
+    {
+        id: 3,
+        name: "The Dark Knight",
+        year: 2008,
+        isPopular: true
+    },
+    {
+        id: 4,
+        name: "The Lord of the Rings: The Return of the King",
+        year: 2003,
+        isPopular: true
+    }
+]
