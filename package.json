@@ -31,6 +31,7 @@
     "envalid": "^8.0.0",
     "express": "^4.21.0",
     "graphql": "^16.9.0",
+    "graphql-tag": "^2.12.6",
     "helmet": "^8.0.0",
     "hpp": "^0.2.3",
     "http": "^0.0.1-security",
