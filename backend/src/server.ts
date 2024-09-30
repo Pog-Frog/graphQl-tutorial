@@ -11,6 +11,8 @@ async function startApolloServer(typeDefs: any, resolvers: any) {
   const app = express();
   const httpServer = http.createServer(app);
 
+  app.use(cors<cors.CorsRequest>({ origin: "*", credentials: true }));
+
   const server = new ApolloServer({
     typeDefs,
     resolvers,
