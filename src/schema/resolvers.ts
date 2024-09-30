@@ -18,7 +18,19 @@ const resolvers = {
 
     User: {
         favoriteMovies: (parent: any) => {
-            return MovieData.filter((movie: any) => parent.favoriteMovies.includes(movie.id));
+            return MovieData.filter((movie: any) => parent.favoriteMovies?.includes(movie.id));
+        }
+    },
+
+    Mutation: {
+        createUser: (parent: any, args: any) => {
+            const newUser = args.input;
+            newUser.id = UserData.length + 1;
+            
+            // Add the new user to the database
+            UserData.push(newUser);
+
+            return newUser;
         }
     }
 }

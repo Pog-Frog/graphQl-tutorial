@@ -1,6 +1,7 @@
 import gql from 'graphql-tag';
 
 // enums are used to define a set of constants and for validation
+//inputs are used to set default values for the input fields
 const typeDefs = gql`
     type User {
         id: ID!
@@ -32,6 +33,17 @@ const typeDefs = gql`
         name: String!
         year: Int!
         isPopular: Boolean!
+    }
+
+    input CreateUserInput {
+        name: String!
+        email: String!
+        age: Int!
+        nationality: Nationality = American
+    }
+
+    type Mutation {
+        createUser(input: CreateUserInput!): User!
     }
 `;
 
