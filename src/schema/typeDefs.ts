@@ -46,11 +46,15 @@ const typeDefs = gql`
         id: ID!
         name: String!
     }
-    
+
+    input DeleteUserInput {
+        id: ID!
+    }
 
     type Mutation {
         createUser(input: CreateUserInput!): User!
         updateUsername(input: UpdateUsernameInput!): User!
+        deleteUser(input: DeleteUserInput!): User!
     }
 `;
 

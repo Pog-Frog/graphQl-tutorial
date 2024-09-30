@@ -42,6 +42,18 @@ const resolvers = {
             //update the user in the database
 
             return user;
+        },
+        deleteUser: (parent: any, args: any) => {
+            const { id } = args.input;
+            const userIndex = UserData.findIndex((user: any) => user.id == id);
+            const user = UserData[userIndex];
+            if(userIndex > -1) {
+                UserData.splice(userIndex, 1);
+            }
+
+            //delete the user from the database
+
+            return user;
         }
     }
 }
