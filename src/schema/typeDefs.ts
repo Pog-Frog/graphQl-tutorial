@@ -7,7 +7,7 @@ const typeDefs = gql`
         name: String!
         email: String!
         age: Int!
-        nationality: String!
+        nationality: Nationality
         friends: [User!]
         favoriteMovies: [Movie!]
     }
