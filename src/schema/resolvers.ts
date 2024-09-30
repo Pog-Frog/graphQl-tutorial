@@ -31,6 +31,17 @@ const resolvers = {
             UserData.push(newUser);
 
             return newUser;
+        },
+        updateUsername: (parent: any, args: any) => {
+            const { id, name } = args.input;
+            const user = UserData.find((user: any) => user.id == id);
+            if(user) {
+                user.name = name;
+            }
+
+            //update the user in the database
+
+            return user;
         }
     }
 }
